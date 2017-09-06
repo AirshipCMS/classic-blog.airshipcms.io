@@ -1,0 +1,25 @@
+<div class='container'>
+  <div class='columns'>
+  {{#each items}}
+    <a href='/elements/view/{{ permalink }}' class='column is-3 element'>
+      <div class='card'>
+        <div class='card-image'>
+          <figure class="image">
+          {{#each fields.thumbnail_image}}
+            <img src="{{ url }}" alt="{{ fields.name }}">
+          {{/each}}
+          </figure>
+        </div>
+        <div class='card-content'>
+          <div class="media-content">
+            <p>{{ fields.title }} - {{ fields.author }}</p>
+            <p>{{ fields.short_description }}</p>
+            <p>{{ updated_at }}</p>
+            
+          </div>
+        </div>
+      </div>
+    </a>
+  {{/each}}
+  </div>
+</div>
